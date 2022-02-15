@@ -1,0 +1,76 @@
+#contentContainer{
+    width: 550px;
+    height: 350px;
+    border: 5px black solid;
+    overflow: hidden; /*показывает один блок вместо 4х в ряд, типа скрывает остальные блоки выходящие за размеры*/ 
+}
+/* настраиваю внешний вид блоков и вставляю картинки*/
+#wrapper{
+    width: 2200px; /* общая ширина всех блоков*/ 
+    transform: translate3d(0,0,0); /*вроде как размещает где угодно, но мне мало понятно*/
+    transition: transform .5s ease-in-out;
+}
+
+.content{
+    float: left;
+    width: 550px;
+    height: 350px;
+    white-space: normal; /*как я понял размещает элементы в строчку??*/ 
+    background-repeat: no-repeat; /*не понял */
+}
+
+#itemOne{
+    background-color: #ADFF2F;
+    background-image: url("//www.kirupa.com/images/blueSquare.png");
+}
+
+#itemTwo{
+    background-color: #ff7f50;
+    background-image: url("//www.kirupa.com/images/yellowSquare.png");
+}
+#itemThree{
+    background-color: #1e90ff;
+    background-image: url("//www.kirupa.com/images/pinkSquare.png");
+}
+#itemFour{
+    background-color: #dc143c;
+    background-image: url("//www.kirupa.com/images/graySquare.png");
+}
+
+/* настраиваю стилистику хуевен в виде точек под слайдами */
+#navLinks{
+    text-align: center; /* центральное выравнивание в блочном контейнере*/
+    width: 550px;
+}
+  #navLinks ul{
+      margin: 0px;
+      padding: 0px;
+      display: inline-block;
+      margin-top: 6px;
+  }
+  /* делает кружки  и задает внешний вид этим кружкам*/
+     #navLinks ul li{
+         float: left;
+         text-align: center;
+         margin: 10px;
+         list-style: none;
+         cursor: pointer;
+         background-color: #cccccc;
+         padding: 5px;
+         border-radius: 50%;
+         border: black 5px solid;
+     }
+     /* меняет цвет при наведении*/
+        #navLinks ul li:hover {
+            background-color: #ffff00;
+        }
+        #navLinks ul li:active {
+            background-color: #333333;
+            color: #ffffff;
+            outline-width: 7px;
+        }
+        /*меняет цвет во время зажатия, тип когда долго держишь*/
+           #navLinks ul li.active:hover {
+              background-color: #484848;
+              color: #ffffff;
+           }
